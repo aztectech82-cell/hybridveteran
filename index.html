@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Veteran Vehicle Services | Mobile Diagnostics & Mechanic Referrals | Riverside, CA</title>
+    <meta name="description" content="Veteran-owned mobile diagnostics, pre-purchase inspections, and mechanic referral service. ASE certified. We come to you. Riverside & San Bernardino Counties.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --navy: #1a2332;
+            --olive: #4a5d23;
+            --olive-light: #6b8a2f;
+            --gold: #c8a44e;
+            --gold-light: #e8c96a;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #e9ecef;
+            --gray-200: #dee2e6;
+            --gray-600: #6c757d;
+            --gray-800: #343a40;
+            --red: #c0392b;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAV */
+        .nav {
+            background: var(--navy);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-brand {
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .nav-brand span { color: var(--gold); }
+        .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .nav-links a {
+            color: var(--gray-200);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold);
+            color: var(--navy) !important;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 700 !important;
+        }
+        .nav-cta:hover { background: var(--gold-light); }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #2c3e50 100%);
+            color: var(--white);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--gray-200);
+            max-width: 640px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+        .badge {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            letter-spacing: 0.5px;
+        }
+        .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary { background: var(--gold); color: var(--navy); }
+        .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--navy); }
+        .btn-olive { background: var(--olive); color: var(--white); }
+        .btn-olive:hover { background: var(--olive-light); }
+
+        /* BROKER SECTION */
+        .broker {
+            background: var(--olive);
+            color: var(--white);
+            padding: 60px 0;
+        }
+        .broker h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .broker > .container > p {
+            text-align: center;
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .broker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            align-items: start;
+        }
+        .broker-steps { list-style: none; }
+        .broker-steps li {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        .step-num {
+            background: var(--gold);
+            color: var(--navy);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .step-text h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+        .step-text p { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+
+        /* REQUEST FORM */
+        .form-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .form-card h3 {
+            color: var(--navy);
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gray-600);
+            margin-bottom: 4px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--gray-200);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--olive);
+            box-shadow: 0 0 0 3px rgba(74,93,35,0.15);
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--olive);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+        .form-submit:hover { background: var(--olive-light); }
+        .form-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            margin-top: 12px;
+        }
+
+        /* SERVICES */
+        .services { padding: 70px 0; background: var(--gray-50); }
+        .services h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 12px;
+            color: var(--navy);
+        }
+        .services > .container > p {
+            text-align: center;
+            color: var(--gray-600);
+            max-width: 560px;
+            margin: 0 auto 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 28px;
+            border: 1px solid var(--gray-100);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .service-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ABOUT */
+        .about { padding: 70px 0; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .about h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+        .about p { color: var(--gray-600); margin-bottom: 16px; }
+        .creds-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .cred {
+            background: var(--gray-50);
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 3px solid var(--olive);
+        }
+        .cred strong { display: block; font-size: 0.85rem; color: var(--navy); }
+        .cred span { font-size: 0.8rem; color: var(--gray-600); }
+
+        /* DYNO */
+        .dyno {
+            background: var(--navy);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .dyno h2 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+        .dyno p {
+            color: var(--gray-200);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            font-size: 1.05rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--gray-800);
+            color: var(--gray-200);
+            padding: 40px 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+        .footer h4 {
+            color: var(--white);
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .footer p, .footer a {
+            font-size: 0.85rem;
+            color: var(--gray-200);
+            text-decoration: none;
+            line-height: 2;
+        }
+        .footer a:hover { color: var(--gold); }
+        .footer-links { list-style: none; }
+        .footer-links a { display: block; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+        .footer-bottom a { color: var(--gray-600); }
+
+        /* DISCLAIMER */
+        .disclaimer {
+            background: var(--gray-50);
+            padding: 24px 0;
+            border-top: 1px solid var(--gray-100);
+        }
+        .disclaimer p {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .creds-grid { grid-template-columns: 1fr; }
+            .hero { padding: 50px 0 40px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="container">
+        <a href="#" class="nav-brand">HYBRID <span>VETERAN</span></a>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#find-mechanic">Find a Mechanic</a>
+            <a href="#about">About</a>
+            <a href="#dyno">Dyno Lab</a>
+            <a href="tel:5626597554" class="nav-cta">Call (562) 659-7554</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-badges">
+            <span class="badge">VETERAN-OWNED</span>
+            <span class="badge">ASE CERTIFIED</span>
+            <span class="badge">MOBILE</span>
+            <span class="badge">BAR ARD 302636</span>
+        </div>
+        <h1>Expert Vehicle Diagnostics.<br><span>We Come to You.</span></h1>
+        <p>Mobile diagnostics, pre-purchase inspections, hybrid/EV consulting, and access to UC Riverside CE-CERT's research-grade dynamometer labs. Need a mechanic? We'll match you with a vetted, licensed pro in your area.</p>
+        <div class="hero-buttons">
+            <a href="#find-mechanic" class="btn btn-primary">Find a Mechanic</a>
+            <a href="#services" class="btn btn-outline">Our Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- BROKER / FIND A MECHANIC -->
+<section class="broker" id="find-mechanic">
+    <div class="container">
+        <h2>Need a Mobile Mechanic?</h2>
+        <p>Tell us what's going on with your vehicle. We'll match you with a licensed, vetted mechanic in your area -- fast.</p>
+        <div class="broker-grid">
+            <ul class="broker-steps">
+                <li>
+                    <span class="step-num">1</span>
+                    <div class="step-text">
+                        <h3>Tell Us What You Need</h3>
+                        <p>Fill out the form or call us. Describe the issue, vehicle, and your location.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <div class="step-text">
+                        <h3>We Match You</h3>
+                        <p>We connect you with a licensed, insured mobile mechanic in your area who specializes in your type of repair.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <div class="step-text">
+                        <h3>Get It Fixed</h3>
+                        <p>The mechanic comes to you. On-site repair, transparent pricing, no surprise shop fees.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">4</span>
+                    <div class="step-text">
+                        <h3>Quality Guaranteed</h3>
+                        <p>Every mechanic in our network is licensed and vetted. If something's not right, we make it right.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="form-card">
+                <h3>Request a Mechanic</h3>
+                <form id="mechanic-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle">Vehicle (Year / Make / Model)</label>
+                        <input type="text" id="vehicle" name="vehicle" required placeholder="2018 Toyota Camry">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="diagnostics">Diagnostics / Check Engine Light</option>
+                            <option value="brakes">Brake Repair</option>
+                            <option value="engine">Engine Repair</option>
+                            <option value="transmission">Transmission</option>
+                            <option value="electrical">Electrical Systems</option>
+                            <option value="suspension">Suspension / Steering</option>
+                            <option value="hybrid-ev">Hybrid / EV Service</option>
+                            <option value="pre-purchase">Pre-Purchase Inspection</option>
+                            <option value="oil-maintenance">Oil Change / Maintenance</option>
+                            <option value="ac-heating">A/C & Heating</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Your Location (City or Zip)</label>
+                        <input type="text" id="location" name="location" required placeholder="Riverside, CA or 92507">
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Describe the Issue</label>
+                        <textarea id="details" name="details" placeholder="What's happening? Any warning lights, noises, or symptoms?"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Find Me a Mechanic</button>
+                    <p class="form-note">We'll contact you within 2 hours during business hours. No spam, no selling your info.</p>
+                </form>
+                <div id="form-success" style="display:none; text-align:center; padding:40px 20px;">
+                    <div style="font-size:3rem; margin-bottom:16px;">&#10003;</div>
+                    <h3 style="color:var(--olive); margin-bottom:8px;">Request Received!</h3>
+                    <p style="color:var(--gray-600);">We'll match you with a mechanic and contact you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <p>More than a referral service. We provide expert-level consulting and diagnostics directly.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">&#128269;</div>
+                <h3>Mobile Diagnostics</h3>
+                <p>Professional-grade scan tools, on-site at your location. Plain-English answers about what's wrong and what it'll cost to fix. No shop markup.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#128663;</div>
+                <h3>Pre-Purchase Inspections</h3>
+                <p>Buying a used car? We inspect it before you sign. Full mechanical assessment, scan, and written report. Know exactly what you're getting.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#9889;</div>
+                <h3>Hybrid & EV Consulting</h3>
+                <p>Battery health analysis, system diagnostics, maintenance strategy. We help you understand your hybrid or electric vehicle -- not just fix it.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#127891;</div>
+                <h3>DIY Education</h3>
+                <p>Want to do your own work? We teach you how -- hands-on guidance, tool recommendations, and step-by-step coaching for owners who want to learn.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#128187;</div>
+                <h3>ECU Programming</h3>
+                <p>Module programming, key coding, and advanced electronic diagnostics. Dealer-level capability without the dealer price. Coming soon.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">&#129309;</div>
+                <h3>Mechanic Referrals</h3>
+                <p>Need more than diagnostics? We match you with a licensed, insured mobile mechanic in your area. Vetted network, quality guaranteed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div>
+                <h2>Built by a Veteran. Backed by Research.</h2>
+                <p>Hybrid Veteran Vehicle Services was founded by Marcos Alvarez -- an Army veteran with 8.5 years of military fleet maintenance experience, ASE certifications across 7 areas, and a freshly completed MBA from UC Riverside (2026).</p>
+                <p>After 4 years as a research engineer at UC Riverside's CE-CERT (College of Engineering - Center for Environmental Research & Technology), Marcos brings lab-grade diagnostic capability to your driveway.</p>
+                <p>We're not a shop. We're a consulting practice. The expertise of a dealership technician, delivered on-site as a service.</p>
+            </div>
+            <div>
+                <div class="creds-grid">
+                    <div class="cred">
+                        <strong>ASE Certified</strong>
+                        <span>A2, A4, A5, A6, A7, A8</span>
+                    </div>
+                    <div class="cred">
+                        <strong>HDIM Licensed</strong>
+                        <span>Heavy-Duty I/M Inspector</span>
+                    </div>
+                    <div class="cred">
+                        <strong>BAR Registered</strong>
+                        <span>ARD 302636</span>
+                    </div>
+                    <div class="cred">
+                        <strong>MBA</strong>
+                        <span>UC Riverside, 2026</span>
+                    </div>
+                    <div class="cred">
+                        <strong>CE-CERT</strong>
+                        <span>4 years R&D engineering</span>
+                    </div>
+                    <div class="cred">
+                        <strong>Army Veteran</strong>
+                        <span>8.5 years fleet maintenance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DYNO LAB -->
+<section class="dyno" id="dyno">
+    <div class="container">
+        <h2>Dynamometer Analysis</h2>
+        <p>Need real data -- not a guess? Through UC Riverside CE-CERT, we have access to research-grade light-duty and heavy-duty vehicle dynamometer labs. Performance baselines, emissions analysis, and diagnostic data that shops can't provide.</p>
+        <a href="#find-mechanic" class="btn btn-primary">Request Dyno Analysis</a>
+    </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="disclaimer">
+    <div class="container">
+        <p>Hybrid Veteran Vehicle Services operates as an independent automotive consulting and mechanic referral service. When connecting you with mechanics in our network, we act as a referral platform -- the mechanics are independent, licensed service providers. We vet all network mechanics for licensing and insurance, but we are not the direct service provider for referred repair work. For our own consulting, diagnostics, and inspection services, we are the direct provider. All mechanics in our referral network are required to hold valid California BAR registration and carry appropriate insurance.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>Hybrid Veteran Vehicle Services</h4>
+                <p>Veteran-owned mobile diagnostics and automotive consulting.<br>Serving Riverside and San Bernardino Counties.</p>
+                <p style="margin-top:12px;">
+                    <strong>Phone:</strong> <a href="tel:5626597554">(562) 659-7554</a><br>
+                    <strong>Email:</strong> <a href="mailto:marcos@vetfleet.com">marcos@vetfleet.com</a><br>
+                    <strong>Location:</strong> Riverside, CA (Mobile -- we come to you)
+                </p>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Mobile Diagnostics</a></li>
+                    <li><a href="#services">Pre-Purchase Inspections</a></li>
+                    <li><a href="#services">Hybrid & EV Consulting</a></li>
+                    <li><a href="#services">DIY Education</a></li>
+                    <li><a href="#find-mechanic">Find a Mechanic</a></li>
+                    <li><a href="#dyno">Dyno Lab Analysis</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <ul class="footer-links">
+                    <li><a href="https://www.linkedin.com/company/117204340/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/hybridveteran/" target="_blank">Instagram</a></li>
+                    <li><a href="https://hybridveteran.com">hybridveteran.com</a></li>
+                </ul>
+                <h4 style="margin-top:20px;">Fleet Services</h4>
+                <ul class="footer-links">
+                    <li><a href="https://www.linkedin.com/company/vetfleet/" target="_blank">Veteran Fleet Technologies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hybrid Veteran Vehicle Services. All rights reserved. BAR ARD 302636. Veteran-Owned Business.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+    e.preventDefault();
+    var form = document.getElementById('mechanic-form');
+    var success = document.getElementById('form-success');
+    var data = new FormData(form);
+    var subject = 'Mechanic Request - ' + data.get('vehicle');
+    var body = 'Name: ' + data.get('name') + '\n'
+             + 'Phone: ' + data.get('phone') + '\n'
+             + 'Email: ' + data.get('email') + '\n'
+             + 'Vehicle: ' + data.get('vehicle') + '\n'
+             + 'Service: ' + data.get('service') + '\n'
+             + 'Location: ' + data.get('location') + '\n'
+             + 'Details: ' + data.get('details');
+    window.location.href = 'mailto:marcos@vetfleet.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    form.style.display = 'none';
+    success.style.display = 'block';
+}
+</script>
+
+</body>
+</html>
