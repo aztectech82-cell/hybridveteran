@@ -3,13 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hybrid Veteran Vehicle Services | Mobile Diagnostics & Mechanic Referrals | Riverside, CA</title>
-    <meta name="description" content="Veteran-owned mobile diagnostics, pre-purchase inspections, and mechanic referral service. ASE certified. We come to you. Riverside & San Bernardino Counties.">
+    <title>Mobile Pre-Purchase Inspections | Riverside &amp; Inland Empire</title>
+    <meta name="description" content="Independent mobile pre-purchase and pre-sale vehicle inspections in Riverside and the Inland Empire. Written condition report, photos, and supported scan data.">
     <link rel="canonical" href="https://hybridveteran.com/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Hybrid Veteran Vehicle Services | Riverside, CA">
-    <meta property="og:description" content="Veteran-owned mobile diagnostics, pre-purchase inspections, and mechanic referral service. ASE certified. We come to you.">
+    <meta property="og:title" content="Mobile Pre-Purchase Inspections | Hybrid Veteran">
+    <meta property="og:description" content="Know the car before you buy it. Independent mobile inspections with a written condition report, photos, and clear limitations.">
     <meta property="og:url" content="https://hybridveteran.com/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Hybrid Veteran Vehicle Services",
+      "url": "https://hybridveteran.com/",
+      "telephone": "+15626597554",
+      "email": "hybridveteran@gmail.com",
+      "areaServed": [
+        "Riverside, CA",
+        "Corona, CA",
+        "Moreno Valley, CA",
+        "Jurupa Valley, CA",
+        "Eastvale, CA",
+        "Norco, CA",
+        "Fontana, CA",
+        "Ontario, CA",
+        "Rancho Cucamonga, CA",
+        "Chino, CA",
+        "Chino Hills, CA",
+        "San Bernardino, CA"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Marcos Alvarez Guzman"
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mobile Pre-Purchase Vehicle Inspection",
+            "description": "Non-destructive mobile condition inspection with photos, a written report, and diagnostic scan data when supported."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mobile Pre-Sale Vehicle Inspection",
+            "description": "Documented vehicle-condition inspection before a private-party sale or listing."
+          }
+        }
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -38,6 +84,7 @@
             color: var(--gray-800);
             line-height: 1.6;
             background: var(--white);
+            overflow-x: hidden;
         }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -142,33 +189,33 @@
         .btn-olive { background: var(--olive); color: var(--white); }
         .btn-olive:hover { background: var(--olive-light); }
 
-        /* BROKER SECTION */
-        .broker {
+        /* REQUEST SECTION */
+        .request {
             background: var(--olive);
             color: var(--white);
             padding: 60px 0;
         }
-        .broker h2 {
+        .request h2 {
             font-size: 2rem;
             font-weight: 800;
             text-align: center;
             margin-bottom: 12px;
         }
-        .broker > .container > p {
+        .request > .container > p {
             text-align: center;
             font-size: 1.05rem;
             color: rgba(255,255,255,0.85);
             max-width: 600px;
             margin: 0 auto 40px;
         }
-        .broker-grid {
+        .request-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 32px;
             align-items: start;
         }
-        .broker-steps { list-style: none; }
-        .broker-steps li {
+        .request-steps { list-style: none; }
+        .request-steps li {
             display: flex;
             gap: 16px;
             margin-bottom: 24px;
@@ -329,15 +376,15 @@
         .cred strong { display: block; font-size: 0.85rem; color: var(--navy); }
         .cred span { font-size: 0.8rem; color: var(--gray-600); }
 
-        /* DYNO */
-        .dyno {
+        /* SCOPE */
+        .scope {
             background: var(--navy);
             color: var(--white);
             padding: 60px 0;
             text-align: center;
         }
-        .dyno h2 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
-        .dyno p {
+        .scope h2 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+        .scope p {
             color: var(--gray-200);
             max-width: 600px;
             margin: 0 auto 32px;
@@ -397,6 +444,13 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            .container { padding: 0 18px; }
+            .nav .container { justify-content: center; }
+            .nav-links { display: none; }
+            .hero-buttons { flex-direction: column; align-items: stretch; }
+            .hero-buttons .btn { width: 100%; text-align: center; }
+            .hero-badges { gap: 8px; }
+            .badge { padding: 5px 12px; font-size: 0.72rem; }
             .about-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
             .creds-grid { grid-template-columns: 1fr; }
@@ -409,13 +463,13 @@
 <!-- NAV -->
 <nav class="nav">
     <div class="container">
-        <a href="#" class="nav-brand">HYBRID <span>VETERAN</span></a>
+        <a href="/" class="nav-brand">HYBRID <span>VETERAN</span></a>
         <div class="nav-links">
-            <a href="inspections.html">Pre-Purchase Inspection</a>
             <a href="#services">Services</a>
-            <a href="#find-mechanic">Find a Mechanic</a>
+            <a href="#scope">What to Expect</a>
             <a href="#about">About</a>
-            <a href="#dyno">Dyno Lab</a>
+            <a href="#area">Service Area</a>
+            <a href="#book">Request</a>
             <a href="tel:5626597554" class="nav-cta">Call (562) 659-7554</a>
         </div>
     </div>
@@ -430,54 +484,54 @@
             <span class="badge">MOBILE</span>
             <span class="badge">BAR ARD 302636</span>
         </div>
-        <h1>Expert Vehicle Diagnostics.<br><span>We Come to You.</span></h1>
-        <p>Mobile diagnostics, pre-purchase inspections, hybrid/EV consulting, and access to UC Riverside CE-CERT's research-grade dynamometer labs. Need a mechanic? We'll match you with a vetted, licensed pro in your area.</p>
+        <h1>Know the car<br><span>before you buy it.</span></h1>
+        <p>Mobile pre-purchase and pre-sale inspections for gas, diesel, hybrid, and selected electric vehicles. We inspect at the seller's location and deliver a written condition report with photos, supported scan data, observed defects, and clear limitations.</p>
         <div class="hero-buttons">
-            <a href="inspections.html" class="btn btn-primary">Pre-Purchase Inspection</a>
-            <a href="#find-mechanic" class="btn btn-outline">Find a Mechanic</a>
+            <a href="#book" class="btn btn-primary">Request an Inspection</a>
+            <a href="tel:5626597554" class="btn btn-outline">Call or Text</a>
         </div>
     </div>
 </section>
 
-<!-- BROKER / FIND A MECHANIC -->
-<section class="broker" id="find-mechanic">
+<!-- PROCESS + REQUEST -->
+<section class="request" id="book">
     <div class="container">
-        <h2>Need a Mobile Mechanic?</h2>
-        <p>Tell us what's going on with your vehicle. We'll match you with a licensed, vetted mechanic in your area -- fast.</p>
-        <div class="broker-grid">
-            <ul class="broker-steps">
+        <h2>Request a Mobile Inspection</h2>
+        <p>Tell us where the vehicle is and what you are considering. We will confirm scope, access, timing, and travel before an appointment is accepted.</p>
+        <div class="request-grid">
+            <ul class="request-steps">
                 <li>
                     <span class="step-num">1</span>
                     <div class="step-text">
-                        <h3>Tell Us What You Need</h3>
-                        <p>Fill out the form or call us. Describe the issue, vehicle, and your location.</p>
+                        <h3>Send the Vehicle Details</h3>
+                        <p>Year, make, model, VIN when available, mileage, seller location, and your preferred appointment window.</p>
                     </div>
                 </li>
                 <li>
                     <span class="step-num">2</span>
                     <div class="step-text">
-                        <h3>We Match You</h3>
-                        <p>We connect you with a licensed, insured mobile mechanic in your area who specializes in your type of repair.</p>
+                        <h3>Confirm Seller Permission</h3>
+                        <p>Confirm access for the inspection, cold start, diagnostic connection, and road test when safe and authorized.</p>
                     </div>
                 </li>
                 <li>
                     <span class="step-num">3</span>
                     <div class="step-text">
-                        <h3>Get It Fixed</h3>
-                        <p>The mechanic comes to you. On-site repair, transparent pricing, no surprise shop fees.</p>
+                        <h3>Inspection at the Vehicle</h3>
+                        <p>We document observable condition and supported scan data at the seller's location.</p>
                     </div>
                 </li>
                 <li>
                     <span class="step-num">4</span>
                     <div class="step-text">
-                        <h3>Quality Guaranteed</h3>
-                        <p>Every mechanic in our network is licensed and vetted. If something's not right, we make it right.</p>
+                        <h3>Receive the Written Report</h3>
+                        <p>Use the photos, findings, and stated limitations to make your own buy, sell, or negotiation decision.</p>
                     </div>
                 </li>
             </ul>
             <div class="form-card">
-                <h3>Request a Mechanic</h3>
-                <form id="mechanic-form" onsubmit="handleSubmit(event)">
+                <h3>Inspection Details</h3>
+                <form id="inspection-form" onsubmit="handleSubmit(event)">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required placeholder="Full name">
@@ -488,45 +542,52 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@email.com">
+                        <input type="email" id="email" name="email" required placeholder="you@email.com">
                     </div>
                     <div class="form-group">
                         <label for="vehicle">Vehicle (Year / Make / Model)</label>
-                        <input type="text" id="vehicle" name="vehicle" required placeholder="2018 Toyota Camry">
+                        <input type="text" id="vehicle" name="vehicle" required placeholder="2021 Toyota RAV4 Hybrid">
                     </div>
                     <div class="form-group">
-                        <label for="service">Service Needed</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select a service...</option>
-                            <option value="diagnostics">Diagnostics / Check Engine Light</option>
-                            <option value="brakes">Brake Repair</option>
-                            <option value="engine">Engine Repair</option>
-                            <option value="transmission">Transmission</option>
-                            <option value="electrical">Electrical Systems</option>
-                            <option value="suspension">Suspension / Steering</option>
-                            <option value="hybrid-ev">Hybrid / EV Service</option>
-                            <option value="pre-purchase">Pre-Purchase Inspection</option>
-                            <option value="oil-maintenance">Oil Change / Maintenance</option>
-                            <option value="ac-heating">A/C & Heating</option>
-                            <option value="other">Other</option>
+                        <label for="inspection-type">Inspection Type</label>
+                        <select id="inspection-type" name="inspection-type" required>
+                            <option value="pre-purchase">Pre-purchase inspection</option>
+                            <option value="pre-sale">Pre-sale inspection</option>
+                            <option value="multi-vehicle">Multiple vehicles</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="location">Your Location (City or Zip)</label>
-                        <input type="text" id="location" name="location" required placeholder="Riverside, CA or 92507">
+                        <label for="vin">VIN (if available)</label>
+                        <input type="text" id="vin" name="vin" placeholder="17-character VIN">
                     </div>
                     <div class="form-group">
-                        <label for="details">Describe the Issue</label>
-                        <textarea id="details" name="details" placeholder="What's happening? Any warning lights, noises, or symptoms?"></textarea>
+                        <label for="mileage">Mileage (if known)</label>
+                        <input type="text" id="mileage" name="mileage" placeholder="e.g. 68,000">
                     </div>
-                    <button type="submit" class="form-submit">Find Me a Mechanic</button>
-                    <p class="form-note">We'll contact you within 2 hours during business hours. No spam, no selling your info.</p>
+                    <div class="form-group">
+                        <label for="location">Seller Location (City or Dealer)</label>
+                        <input type="text" id="location" name="location" required placeholder="City, or dealer name and city">
+                    </div>
+                    <div class="form-group">
+                        <label for="window">Preferred Appointment Window</label>
+                        <input type="text" id="window" name="window" placeholder="Weekend date and time range">
+                    </div>
+                    <div class="form-group">
+                        <label for="permission">Seller Permission / Access</label>
+                        <select id="permission" name="permission">
+                            <option value="not-confirmed">Not confirmed yet</option>
+                            <option value="confirmed">Confirmed with seller</option>
+                            <option value="dealer">Vehicle is at a dealer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Cold Start, Road Test, Charging Access, or Other Details</label>
+                        <textarea id="details" name="details" placeholder="Tell us what the seller has authorized and any concerns you want documented."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Prepare Email Request</button>
+                    <p class="form-note">This opens your email app with the request filled in. Nothing is sent until you review it and press Send.</p>
                 </form>
-                <div id="form-success" style="display:none; text-align:center; padding:40px 20px;">
-                    <div style="font-size:3rem; margin-bottom:16px;">&#10003;</div>
-                    <h3 style="color:var(--olive); margin-bottom:8px;">Request Received!</h3>
-                    <p style="color:var(--gray-600);">We'll match you with a mechanic and contact you shortly.</p>
-                </div>
+                <p id="form-status" class="form-note" role="status" aria-live="polite" hidden></p>
             </div>
         </div>
     </div>
@@ -535,40 +596,34 @@
 <!-- SERVICES -->
 <section class="services" id="services">
     <div class="container">
-        <h2>Our Services</h2>
-        <p>More than a referral service. We provide expert-level consulting and diagnostics directly.</p>
+        <h2>Inspection Services</h2>
+        <p>Independent condition information for buyers and sellers. Repair work and mechanic referrals are not part of the offer.</p>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">&#128269;</div>
-                <h3>Mobile Diagnostics</h3>
-                <p>Professional-grade scan tools, on-site at your location. Plain-English answers about what's wrong and what it'll cost to fix. No shop markup.</p>
-            </div>
-            <div class="service-card">
                 <div class="service-icon">&#128663;</div>
-                <h3>Pre-Purchase Inspections</h3>
-                <p>Buying a used car? We inspect it before you sign. Full mechanical assessment, scan, and written report. Know exactly what you're getting.</p>
+                <h3>Standard Used-Vehicle Inspection</h3>
+                <p>Observable mechanical and cosmetic condition, a road test when authorized and safe, supported diagnostic scan data, photos, and a written report.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">&#9889;</div>
-                <h3>Hybrid & EV Consulting</h3>
-                <p>Battery health analysis, system diagnostics, maintenance strategy. We help you understand your hybrid or electric vehicle -- not just fix it.</p>
+                <h3>Hybrid &amp; EV Supported-Data Inspection</h3>
+                <p>The standard inspection plus vehicle-reported hybrid or EV warnings and battery-system data when the exact vehicle and available tools support access.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">&#127891;</div>
-                <h3>DIY Education</h3>
-                <p>Want to do your own work? We teach you how -- hands-on guidance, tool recommendations, and step-by-step coaching for owners who want to learn.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">&#128187;</div>
-                <h3>ECU Programming</h3>
-                <p>Module programming, key coding, and advanced electronic diagnostics. Dealer-level capability without the dealer price. Coming soon.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">&#129309;</div>
-                <h3>Mechanic Referrals</h3>
-                <p>Need more than diagnostics? We match you with a licensed, insured mobile mechanic in your area. Vetted network, quality guaranteed.</p>
+                <div class="service-icon">&#128221;</div>
+                <h3>Pre-Sale Inspection</h3>
+                <p>Document the vehicle's observed condition before listing so you can decide what to repair, disclose, or account for in the asking price.</p>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- SCOPE -->
+<section class="scope" id="scope">
+    <div class="container">
+        <h2>We inspect. We don't sell you the repair.</h2>
+        <p>The service is a non-destructive mobile inspection, not a warranty or guarantee of future reliability. Testing depends on seller permission, safe site access, vehicle design, charging access, and diagnostic-tool coverage. Any specialized battery-capacity, charging, disassembly, or other test must be expressly included in the confirmed written scope.</p>
+        <a href="inspections.html" class="btn btn-primary">See What We Check</a>
     </div>
 </section>
 
@@ -577,10 +632,10 @@
     <div class="container">
         <div class="about-grid">
             <div>
-                <h2>Built by a Veteran. Backed by Research.</h2>
-                <p>Hybrid Veteran Vehicle Services was founded by Marcos Alvarez -- an Army veteran with 8.5 years of military fleet maintenance experience, ASE certifications across 7 areas, and a freshly completed MBA from UC Riverside (2026).</p>
-                <p>After 4 years as a research engineer at UC Riverside's CE-CERT (College of Engineering - Center for Environmental Research & Technology), Marcos brings lab-grade diagnostic capability to your driveway.</p>
-                <p>We're not a shop. We're a consulting practice. The expertise of a dealership technician, delivered on-site as a service.</p>
+                <h2>Experienced, Independent, and Clear About Scope</h2>
+                <p>Hybrid Veteran Vehicle Services was founded by Marcos Alvarez Guzman, an Army veteran and ASE Certified Automobile Technician in six areas: A2, A4, A5, A6, A7, and A8.</p>
+                <p>Marcos also holds an A.S. in Electric Vehicle and Fuel Cell Technology, is a CARB Heavy-Duty Inspection and Maintenance tester, and operates through California BAR Automotive Repair Dealer registration 302636.</p>
+                <p>The inspection report is the product. Hybrid Veteran does not profit from repairs recommended after the inspection.</p>
             </div>
             <div>
                 <div class="creds-grid">
@@ -589,24 +644,24 @@
                         <span>A2, A4, A5, A6, A7, A8</span>
                     </div>
                     <div class="cred">
-                        <strong>HDIM Licensed</strong>
-                        <span>Heavy-Duty I/M Inspector</span>
+                        <strong>CARB HD I/M Tester</strong>
+                        <span>California credential</span>
                     </div>
                     <div class="cred">
                         <strong>BAR Registered</strong>
                         <span>ARD 302636</span>
                     </div>
                     <div class="cred">
-                        <strong>MBA</strong>
-                        <span>UC Riverside, 2026</span>
+                        <strong>EV Education</strong>
+                        <span>A.S. EV/Fuel Cell Technology</span>
                     </div>
                     <div class="cred">
-                        <strong>CE-CERT</strong>
-                        <span>4 years R&D engineering</span>
+                        <strong>Inspection Focus</strong>
+                        <span>Buyers and sellers</span>
                     </div>
                     <div class="cred">
                         <strong>Army Veteran</strong>
-                        <span>8.5 years fleet maintenance</span>
+                        <span>Military maintenance background</span>
                     </div>
                 </div>
             </div>
@@ -614,19 +669,32 @@
     </div>
 </section>
 
-<!-- DYNO LAB -->
-<section class="dyno" id="dyno">
+<!-- SERVICE AREA -->
+<section class="services" id="area">
     <div class="container">
-        <h2>Dynamometer Analysis</h2>
-        <p>Need real data -- not a guess? Through UC Riverside CE-CERT, we have access to research-grade light-duty and heavy-duty vehicle dynamometer labs. Performance baselines, emissions analysis, and diagnostic data that shops can't provide.</p>
-        <a href="#find-mechanic" class="btn btn-primary">Request Dyno Analysis</a>
+        <h2>Riverside &amp; Inland Empire Service Area</h2>
+        <p>By appointment, with travel confirmed before booking. Weekend availability is limited.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Riverside County</h3>
+                <p>Riverside, Corona, Moreno Valley, Jurupa Valley, Eastvale, and Norco.</p>
+            </div>
+            <div class="service-card">
+                <h3>Inland Empire</h3>
+                <p>Fontana, Ontario, Rancho Cucamonga, Chino, Chino Hills, and San Bernardino.</p>
+            </div>
+            <div class="service-card">
+                <h3>Outside the Core Area</h3>
+                <p>Ask first. Availability and travel are quoted for the exact vehicle location.</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- DISCLAIMER -->
 <section class="disclaimer">
     <div class="container">
-        <p>Hybrid Veteran Vehicle Services operates as an independent automotive consulting and mechanic referral service. When connecting you with mechanics in our network, we act as a referral platform -- the mechanics are independent, licensed service providers. We vet all network mechanics for licensing and insurance, but we are not the direct service provider for referred repair work. For our own consulting, diagnostics, and inspection services, we are the direct provider. All mechanics in our referral network are required to hold valid California BAR registration and carry appropriate insurance.</p>
+        <p>Inspection findings reflect observable vehicle condition at the date and time of inspection. This is not a warranty, guarantee, appraisal, smog inspection, or promise of future reliability. Hidden, intermittent, disassembled, inaccessible, or unsupported conditions may not be detectable during a mobile inspection.</p>
     </div>
 </section>
 
@@ -636,22 +704,21 @@
         <div class="footer-grid">
             <div>
                 <h4>Hybrid Veteran Vehicle Services</h4>
-                <p>Veteran-owned mobile diagnostics and automotive consulting.<br>Serving Riverside and San Bernardino Counties.</p>
+                <p>Veteran-owned mobile pre-purchase and pre-sale vehicle inspections.<br>Serving Riverside and the Inland Empire by appointment.</p>
                 <p style="margin-top:12px;">
                     <strong>Phone:</strong> <a href="tel:5626597554">(562) 659-7554</a><br>
-                    <strong>Email:</strong> <a href="mailto:marcos@vetfleet.com">marcos@vetfleet.com</a><br>
+                    <strong>Email:</strong> <a href="mailto:hybridveteran@gmail.com">hybridveteran@gmail.com</a><br>
                     <strong>Location:</strong> Riverside, CA (Mobile -- we come to you)
                 </p>
             </div>
             <div>
                 <h4>Services</h4>
                 <ul class="footer-links">
-                    <li><a href="#services">Mobile Diagnostics</a></li>
-                    <li><a href="#services">Pre-Purchase Inspections</a></li>
-                    <li><a href="#services">Hybrid & EV Consulting</a></li>
-                    <li><a href="#services">DIY Education</a></li>
-                    <li><a href="#find-mechanic">Find a Mechanic</a></li>
-                    <li><a href="#dyno">Dyno Lab Analysis</a></li>
+                    <li><a href="#services">Pre-Purchase Inspection</a></li>
+                    <li><a href="#services">Pre-Sale Inspection</a></li>
+                    <li><a href="inspections.html">Inspection Scope</a></li>
+                    <li><a href="#area">Service Area</a></li>
+                    <li><a href="#book">Request an Inspection</a></li>
                 </ul>
             </div>
             <div>
@@ -676,20 +743,24 @@
 <script>
 function handleSubmit(e) {
     e.preventDefault();
-    var form = document.getElementById('mechanic-form');
-    var success = document.getElementById('form-success');
+    var form = document.getElementById('inspection-form');
+    var status = document.getElementById('form-status');
     var data = new FormData(form);
-    var subject = 'Mechanic Request - ' + data.get('vehicle');
+    var subject = 'Inspection Request - ' + data.get('vehicle');
     var body = 'Name: ' + data.get('name') + '\n'
              + 'Phone: ' + data.get('phone') + '\n'
              + 'Email: ' + data.get('email') + '\n'
+             + 'Inspection type: ' + data.get('inspection-type') + '\n'
              + 'Vehicle: ' + data.get('vehicle') + '\n'
-             + 'Service: ' + data.get('service') + '\n'
-             + 'Location: ' + data.get('location') + '\n'
+             + 'VIN: ' + data.get('vin') + '\n'
+             + 'Mileage: ' + data.get('mileage') + '\n'
+             + 'Seller location: ' + data.get('location') + '\n'
+             + 'Preferred window: ' + data.get('window') + '\n'
+             + 'Seller permission/access: ' + data.get('permission') + '\n'
              + 'Details: ' + data.get('details');
-    window.location.href = 'mailto:marcos@vetfleet.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    form.style.display = 'none';
-    success.style.display = 'block';
+    status.textContent = 'Your email app should open now. Review the request and press Send; nothing has been sent yet.';
+    status.hidden = false;
+    window.location.href = 'mailto:hybridveteran@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 }
 </script>
 
