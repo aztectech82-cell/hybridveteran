@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18492244862"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18492244862');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Report: Hybrid Battery Fault Catch | Hybrid Veteran</title>
+    <meta name="description" content="A real, anonymized pre-purchase inspection report from Hybrid Veteran Vehicle Services -- a hybrid battery fault a dealer left unresolved, caught before the sale closed.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a2332;
+            --olive: #4a5d23;
+            --olive-light: #6b8a2f;
+            --gold: #c8a44e;
+            --gold-light: #e8c96a;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #e9ecef;
+            --gray-200: #dee2e6;
+            --gray-600: #6c757d;
+            --gray-800: #343a40;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--gray-50);
+            margin: 0;
+        }
+        .top-bar {
+            background: var(--navy);
+            color: var(--white);
+            padding: 14px 24px;
+        }
+        .top-bar a {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+        .report-header {
+            background: var(--navy);
+            color: var(--white);
+            padding: 36px 24px;
+            text-align: center;
+        }
+        .report-header h1 { margin: 0 0 8px; font-size: 1.5rem; }
+        .report-header .sub { color: var(--gold-light); font-weight: 600; font-size: 0.95rem; }
+        .report-header .tag {
+            display: inline-block;
+            margin-top: 12px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 0.8rem;
+        }
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            padding: 28px;
+            margin: 24px auto;
+        }
+        .card h2 {
+            font-size: 1.1rem;
+            color: var(--navy);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        table.info td { padding: 6px 0; vertical-align: top; }
+        table.info td:first-child { font-weight: 600; color: var(--gray-600); width: 140px; }
+        .verdict {
+            background: #fdecec;
+            border-left: 4px solid #c0392b;
+            padding: 14px 18px;
+            border-radius: 6px;
+            font-weight: 700;
+            color: #8a1c1c;
+        }
+        .finding p { margin: 0 0 14px; }
+        .finding h3 { color: var(--navy); font-size: 1rem; margin: 20px 0 8px; }
+        .redacted { color: var(--gray-600); font-style: italic; }
+        .cta {
+            text-align: center;
+            padding: 32px 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .note {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            text-align: center;
+            padding: 0 20px 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar container">
+        <a href="inspections.html#samples">&larr; Back to Hybrid Veteran Inspections</a>
+    </div>
+
+    <div class="report-header">
+        <h1>HYBRID VETERAN VEHICLE SERVICES</h1>
+        <div class="sub">Pre-Purchase Vehicle Inspection Report</div>
+        <div class="tag">SAMPLE REPORT &mdash; client and dealer details redacted</div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Vehicle Information</h2>
+            <table class="info">
+                <tr><td>Client</td><td class="redacted">[Client Name] &mdash; [Phone Redacted] &mdash; [Email Redacted]</td></tr>
+                <tr><td>Vehicle</td><td>2020 Kia Niro LX/LXS Hybrid, VIN <span class="redacted">[Redacted]</span></td></tr>
+                <tr><td>Dealer</td><td class="redacted">[Dealer Name] &mdash; RO #[Redacted], service date 09/22/2026</td></tr>
+                <tr><td>Technician</td><td>Marcos Alvarez &mdash; Mobile Mechanic, ASE A2/A4/A5/A6/A7/A8</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Technician's Final Verdict</h2>
+            <p class="verdict">DO NOT CLOSE UNTIL RESOLVED</p>
+            <p style="margin-top:14px;">This vehicle has an unresolved high-voltage drive system fault tied directly to recent dealer service, and cannot currently pass a California smog check.</p>
+        </div>
+
+        <div class="card finding">
+            <h2>What We Found</h2>
+            <p>Scanned with a professional bidirectional scan tool: one stored code, marked <strong>PERMANENT</strong> &mdash; P0C17, "Drive Motor 'A' Position Sensor Not Learned."</p>
+            <p>A permanent code is built to survive a code-clear or battery reset. It only turns off once the car itself confirms, through real driving, that the fault is actually fixed. Whoever reset this vehicle's codes could not make this one disappear.</p>
+            <p>The #1 documented cause of this exact code: recent high-voltage battery service or a module reset that was never finished with the required motor/resolver calibration relearn &mdash; a procedure that needs a dealer-level scan tool, not a basic code reader.</p>
+            <p>Because that relearn was never completed, the readiness monitors are not set. The car will fail California smog as it sits right now.</p>
+
+            <h3>How This Ties to the Dealer</h3>
+            <p class="redacted">[Dealer]'s own service record (RO #[Redacted], 9/22/26, inspector [Redacted]) shows real work was done on this car that week &mdash; $1,160.48 approved, $175.40 declined.</p>
+            <p>Field notes taken during the scan point the same direction: battery-related codes had been cleared, and a motor position sensor code could not be cleared because it takes dealer-level tooling to reset &mdash; consistent with a battery-system reset that was started and not finished.</p>
+
+            <h3>Steering Noise &mdash; Separate, Minor Issue</h3>
+            <p>Not the main issue here. The dealer's own inspection already logged this rubbing noise on 9/22 and closed it out with a $0.00 repair estimate &mdash; acknowledged, not fixed. Worth a mention, not the headline.</p>
+
+            <h3>What Needed to Happen Before This Sale Closed</h3>
+            <p>Dealer completes the motor/resolver calibration relearn on their own equipment and clears the permanent code for real, or price is adjusted to reflect a car that currently cannot pass smog and has a documented unresolved hybrid-drive fault.</p>
+        </div>
+
+        <div class="cta">
+            <p style="margin-bottom:16px; color:var(--gray-600);">This is what a real inspection catches &mdash; not a walk-around with a flashlight.</p>
+            <a href="inspections.html#book" class="btn">Request Your Own Inspection</a>
+        </div>
+        <p class="note">Client, dealer, and repair-order identifying details have been redacted for this public sample. All findings, codes, and the technician's verdict are reproduced exactly as delivered to the client.</p>
+    </div>
+</body>
+</html>
