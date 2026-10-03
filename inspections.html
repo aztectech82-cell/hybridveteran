@@ -12,16 +12,17 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What We Check | Mobile Vehicle Inspections | Hybrid Veteran</title>
-    <meta name="description" content="See the scope and limits of Hybrid Veteran mobile pre-purchase and pre-sale inspections in Riverside and the Inland Empire, including supported hybrid and EV data.">
+    <title>Mobile Pre-Purchase Vehicle Inspection | Riverside &amp; Inland Empire | Hybrid Veteran</title>
+    <meta name="description" content="Veteran-owned mobile pre-purchase and pre-sale vehicle inspections in Riverside and the Inland Empire. Hybrid and EV battery health checked. ASE certified, BAR licensed (ARD 302636). Written report with photos. We come to you.">
     <link rel="canonical" href="https://hybridveteran.com/inspections.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="What We Check | Hybrid Veteran Mobile Inspections">
-    <meta property="og:description" content="Independent mobile vehicle inspections with a written condition report, photos, supported scan data, and clear limitations.">
+    <meta property="og:title" content="Mobile Pre-Purchase Vehicle Inspection | Riverside &amp; Inland Empire">
+    <meta property="og:description" content="Veteran-owned, ASE-certified mobile vehicle inspections with a written report, photos, and hybrid/EV battery health data. We come to you.">
     <meta property="og:url" content="https://hybridveteran.com/inspections.html">
+    <meta property="og:image" content="https://hybridveteran.com/img/scan-tool.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,7 +30,7 @@
       "name": "Hybrid Veteran Vehicle Services",
       "image": "https://hybridveteran.com/favicon.png",
       "url": "https://hybridveteran.com/inspections.html",
-      "telephone": "+15626597554",
+      "telephone": "+19093126588",
       "email": "marcos@hybridveteran.com",
       "areaServed": [
         {"@type": "City", "name": "Riverside, CA"},
@@ -88,12 +89,20 @@
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--gray-800);
-            line-height: 1.6;
+            line-height: 1.65;
             background: var(--white);
             overflow-x: hidden;
         }
+
+        h1, h2, h3, .nav-brand, .btn {
+            font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+        }
+        h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); font-weight: 700; }
+        h3 { font-size: 1.15rem; font-weight: 700; }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
@@ -153,55 +162,84 @@
             background: var(--gold);
             color: var(--navy) !important;
             padding: 8px 20px;
-            border-radius: 6px;
+            border-radius: 2px;
             font-weight: 700 !important;
         }
         .nav-cta:hover { background: var(--gold-light); }
 
         /* HERO */
         .hero {
-            background: linear-gradient(135deg, var(--navy) 0%, #2c3e50 100%);
+            background: var(--navy);
             color: var(--white);
-            padding: 64px 0 48px;
-            text-align: center;
+            padding: 56px 0 0;
+            border-bottom: 5px solid var(--gold);
         }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 48px;
+            align-items: end;
+        }
+        .hero-copy { padding-bottom: 56px; }
         .hero h1 {
-            font-size: clamp(1.9rem, 4.6vw, 2.9rem);
-            font-weight: 900;
-            line-height: 1.18;
+            font-size: clamp(2.1rem, 5vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.02;
             margin-bottom: 18px;
-            letter-spacing: -1px;
         }
-        .hero h1 span { color: var(--gold); }
+        .hero h1 span { color: var(--gold); display: block; }
         .hero p {
-            font-size: 1.1rem;
-            color: var(--gray-200);
-            max-width: 680px;
-            margin: 0 auto 28px;
-            line-height: 1.7;
+            font-size: 1.08rem;
+            color: #c7ccd4;
+            margin-bottom: 26px;
+            max-width: 46ch;
         }
-        .hero-badges {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 32px;
+        .hero-photo { position: relative; }
+        .hero-photo img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-top: 3px solid var(--gold);
+            border-left: 3px solid var(--gold);
         }
-        .badge {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 6px 14px;
-            border-radius: 20px;
+        .hero-photo figcaption {
+            position: absolute;
+            left: 0; bottom: 0; right: 0;
+            background: rgba(10,14,22,0.88);
+            color: #d8dde4;
             font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--gold-light);
+            line-height: 1.45;
+            padding: 10px 12px;
+            border-left: 3px solid var(--gold);
+        }
+        .hero-photo figcaption strong { color: var(--gold); display: block; font-weight: 700; }
+        /* credential strip -- replaces decorative pill badges */
+        .cred-strip {
+            background: #141b26;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #aeb6c2;
+            font-size: 0.8rem;
             letter-spacing: 0.4px;
+        }
+        .cred-strip .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 28px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+        .cred-strip b { color: var(--white); font-weight: 600; }
+        @media (max-width: 860px) {
+            .hero .container { grid-template-columns: 1fr; gap: 0; }
+            .hero-copy { padding-bottom: 28px; }
+            .hero-photo { margin: 0 -24px; }
+            .hero-photo img { border-left: none; }
         }
         .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
         .btn {
             display: inline-block;
             padding: 14px 32px;
-            border-radius: 8px;
+            border-radius: 2px;
             font-size: 1rem;
             font-weight: 700;
             text-decoration: none;
@@ -237,7 +275,7 @@
             background: var(--white);
             border: 1px solid var(--gray-100);
             border-left: 4px solid var(--gold);
-            border-radius: 8px;
+            border-radius: 2px;
             padding: 28px 32px;
             max-width: 820px;
             margin: 0 auto 40px;
@@ -257,9 +295,9 @@
         .cred {
             background: var(--white);
             padding: 16px;
-            border-radius: 8px;
+            border-radius: 2px;
             border-left: 3px solid var(--olive);
-            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            border-left: 3px solid var(--gold);
         }
         .cred strong { display: block; font-size: 0.85rem; color: var(--navy); }
         .cred span { font-size: 0.8rem; color: var(--gray-600); }
@@ -272,7 +310,7 @@
         }
         .check-card {
             background: var(--white);
-            border-radius: 10px;
+            border-radius: 2px;
             padding: 24px;
             border: 1px solid var(--gray-100);
         }
@@ -310,7 +348,7 @@
         .ev-item {
             background: rgba(255,255,255,0.06);
             border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 8px;
+            border-radius: 2px;
             padding: 16px;
             font-size: 0.88rem;
             color: var(--gray-200);
@@ -331,7 +369,7 @@
             display: inline-block;
             background: rgba(255,255,255,0.12);
             border: 1px solid rgba(255,255,255,0.25);
-            border-radius: 10px;
+            border-radius: 2px;
             padding: 18px 28px;
             margin: 20px auto 8px;
             font-size: 1.1rem;
@@ -353,8 +391,8 @@
         .sample {
             text-align: center;
             background: var(--white);
-            border: 1px dashed var(--gray-200);
-            border-radius: 10px;
+            border: 1px solid var(--gray-200); border-left: 4px solid var(--gold);
+            border-radius: 2px;
             padding: 32px;
             max-width: 640px;
             margin: 0 auto;
@@ -364,9 +402,9 @@
         /* FORM */
         .form-card {
             background: var(--white);
-            border-radius: 12px;
+            border-radius: 2px;
             padding: 32px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            border: 1px solid var(--gray-200); border-top: 4px solid var(--olive);
             max-width: 640px;
             margin: 0 auto;
         }
@@ -385,7 +423,7 @@
             width: 100%;
             padding: 10px 14px;
             border: 1px solid var(--gray-200);
-            border-radius: 6px;
+            border-radius: 2px;
             font-size: 0.95rem;
             font-family: inherit;
         }
@@ -403,7 +441,7 @@
             background: var(--olive);
             color: var(--white);
             border: none;
-            border-radius: 8px;
+            border-radius: 2px;
             font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
@@ -440,7 +478,7 @@
 
 <!-- STICKY MOBILE CALL BAR -->
 <div class="call-bar">
-    <a href="tel:5626597554">&#128222; Call (562) 659-7554 -- Book an Inspection</a>
+    <a href="tel:9093126588">&#128222; Call (909) 312-6588 -- Book an Inspection</a>
 </div>
 
 <!-- NAV -->
@@ -452,7 +490,7 @@
             <a href="#hybrid-ev">Hybrid &amp; EV</a>
             <a href="#area">Service Area</a>
             <a href="#book">Book</a>
-            <a href="tel:5626597554" class="nav-cta">Call (562) 659-7554</a>
+            <a href="tel:9093126588" class="nav-cta">Call (909) 312-6588</a>
         </div>
     </div>
 </nav>
@@ -460,20 +498,33 @@
 <!-- HERO -->
 <section class="hero">
     <div class="container">
-        <div class="hero-badges">
-            <span class="badge">VETERAN-OWNED</span>
-            <span class="badge">ASE CERTIFIED</span>
-            <span class="badge">BAR ARD 302636</span>
-            <span class="badge">MOBILE -- WE COME TO YOU</span>
+        <div class="hero-copy">
+            <h1>Mobile Pre-Purchase Vehicle Inspection<span>Riverside &amp; the Inland Empire</span></h1>
+            <p>Know what you are buying before you sign. A non-destructive pre-purchase or pre-sale inspection by an ASE-certified technician, done where the car is &mdash; with a written condition report, photos, and hybrid or EV battery data when the vehicle supports it.</p>
+            <div class="hero-buttons">
+                <a href="tel:9093126588" class="btn btn-primary">Call (909) 312-6588</a>
+                <a href="#book" class="btn btn-outline">Request an Inspection</a>
+            </div>
         </div>
-        <h1>Mobile Vehicle Inspection Scope<br><span>Riverside &amp; Inland Empire</span></h1>
-        <p>A non-destructive pre-purchase or pre-sale inspection by an ASE-certified technician. You receive a written condition report with photos, observed defects, supported scan data, and clear notes about what could not be tested.</p>
-        <div class="hero-buttons">
-            <a href="tel:5626597554" class="btn btn-primary">Call to Book</a>
-            <a href="#book" class="btn btn-outline">Request an Inspection</a>
-        </div>
+        <figure class="hero-photo">
+            <img src="img/scan-tool.jpg" width="1050" height="1400"
+                 alt="Innova 5610 scan tool showing a permanent hybrid drive-motor fault code during a pre-purchase vehicle inspection in Riverside, California">
+            <figcaption>
+                <strong>Real finding, 2020 hybrid, Riverside</strong>
+                Permanent code the seller's reset could not clear &mdash; the car could not have passed a California smog check.
+            </figcaption>
+        </figure>
     </div>
 </section>
+<div class="cred-strip">
+    <div class="container">
+        <span><b>Veteran-owned</b></span>
+        <span><b>ASE Certified</b> A2 / A4 / A5 / A6 / A7 / A8</span>
+        <span><b>BAR Licensed</b> Automotive Repair Dealer ARD 302636</span>
+        <span><b>CARB</b> Heavy-Duty Inspection &amp; Maintenance Tester</span>
+        <span><b>Mobile</b> &mdash; we come to the vehicle</span>
+    </div>
+</div>
 
 <!-- POSITIONING + CREDENTIALS -->
 <section class="block">
@@ -573,7 +624,7 @@
             <div class="ev-item"><strong>Clear Limitations</strong>Unavailable capacity, isolation, module, or charging tests are identified in the report</div>
         </div>
         <div class="ev-cta">
-            <a href="tel:5626597554" class="btn btn-primary">Ask About Your Hybrid or EV</a>
+            <a href="tel:9093126588" class="btn btn-primary">Ask About Your Hybrid or EV</a>
         </div>
     </div>
 </section>
@@ -739,7 +790,7 @@
 <footer class="footer">
     <div class="container">
         <p><strong>Hybrid Veteran Vehicle Services</strong> -- Riverside &amp; Inland Empire, mobile by appointment</p>
-        <p><a href="tel:5626597554">(562) 659-7554</a> &middot; <a href="mailto:marcos@hybridveteran.com">marcos@hybridveteran.com</a></p>
+        <p><a href="tel:9093126588">(909) 312-6588</a> &middot; <a href="mailto:marcos@hybridveteran.com">marcos@hybridveteran.com</a></p>
         <p><a href="index.html">&larr; Back to hybridveteran.com</a></p>
         <p class="fine">Non-destructive visual and functional inspection without disassembly. Reflects observable condition on the inspection date only. Not a warranty, appraisal, smog inspection, or guarantee of future reliability. &copy; 2026 Hybrid Veteran Vehicle Services. BAR ARD 302636. Veteran-Owned Business.</p>
     </div>
