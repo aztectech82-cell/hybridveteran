@@ -147,7 +147,11 @@
             font-size: 1.2rem;
             text-decoration: none;
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+        .nav-brand img { height: 48px; width: auto; display: block; border-radius: 4px; }
         .nav-brand span { color: var(--gold); }
         .nav-links { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
         .nav-links a {
@@ -198,7 +202,9 @@
         .hero-photo img {
             display: block;
             width: 100%;
-            height: auto;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: top;
             border-top: 3px solid var(--gold);
             border-left: 3px solid var(--gold);
         }
@@ -229,6 +235,56 @@
             padding-bottom: 14px;
         }
         .cred-strip b { color: var(--white); font-weight: 600; }
+
+        /* SLIDESHOW -- auto-rotating */
+        .slideshow {
+            position: relative;
+            max-width: 720px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            background: var(--navy);
+        }
+        .slideshow-track { position: relative; aspect-ratio: 4 / 3; }
+        .slideshow-track img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+        .slideshow-track img.active { opacity: 1; }
+        .slideshow-caption {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            padding: 14px 18px 12px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.75));
+            color: #fff;
+            font-size: 0.9rem;
+            min-height: 48px;
+        }
+        .slideshow-dots {
+            position: absolute;
+            top: 14px; right: 16px;
+            display: flex;
+            gap: 7px;
+        }
+        .slideshow-dots button {
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255,255,255,0.8);
+            background: rgba(255,255,255,0.25);
+            padding: 0;
+            cursor: pointer;
+        }
+        .slideshow-dots button.active { background: var(--gold); border-color: var(--gold); }
+        @media (prefers-reduced-motion: reduce) {
+            .slideshow-track img { transition: none; }
+        }
+
         @media (max-width: 860px) {
             .hero .container { grid-template-columns: 1fr; gap: 0; }
             .hero-copy { padding-bottom: 28px; }
@@ -484,7 +540,7 @@
 <!-- NAV -->
 <nav class="nav">
     <div class="container">
-        <a href="index.html" class="nav-brand">HYBRID <span>VETERAN</span></a>
+        <a href="index.html" class="nav-brand"><img src="img/hv-logo.jpg" alt="Hybrid Veteran Vehicle Services logo"> HYBRID <span>VETERAN</span></a>
         <div class="nav-links">
             <a href="#what-we-check">What We Check</a>
             <a href="#hybrid-ev">Hybrid &amp; EV</a>
@@ -507,11 +563,11 @@
             </div>
         </div>
         <figure class="hero-photo">
-            <img src="img/scan-tool.jpg" width="1050" height="1400"
-                 alt="Innova 5610 scan tool showing a permanent hybrid drive-motor fault code during a pre-purchase vehicle inspection in Riverside, California">
+            <img src="img/work-battery-scan-featured.jpg" width="1400" height="1050"
+                 alt="Full hybrid battery diagnostic scan showing pack voltage, state of charge, and cell-by-cell balance during a pre-purchase vehicle inspection in Riverside, California">
             <figcaption>
-                <strong>Real finding, 2020 hybrid, Riverside</strong>
-                Permanent code the seller's reset could not clear &mdash; the car could not have passed a California smog check.
+                <strong>Full HV battery diagnostic, not just a code reader</strong>
+                Pack voltage, state of charge, and cell-by-cell balance &mdash; the data that actually tells you what a used hybrid battery is worth.
             </figcaption>
         </figure>
     </div>
@@ -525,6 +581,66 @@
         <span><b>Mobile</b> &mdash; we come to the vehicle</span>
     </div>
 </div>
+
+<!-- WORK GALLERY -->
+<section class="block alt" id="gallery">
+    <div class="container">
+        <h2>From Real Inspections</h2>
+        <p class="lead">A sample of what the equipment and the eye actually catch.</p>
+        <div class="slideshow" id="work-slideshow">
+            <div class="slideshow-track">
+                <img class="active" src="img/work-battery-scan-featured.jpg" alt="Hybrid battery scan showing pack voltage, state of charge, and per-block balance" data-caption="Full hybrid battery scan &mdash; pack voltage, state of charge, cell-by-cell balance">
+                <img src="img/work-hybrid-engine-bay.jpg" alt="Hybrid Synergy Drive engine bay during a pre-purchase inspection" data-caption="Hybrid Synergy Drive bay &mdash; HV cabling and inverter checked in place">
+                <img src="img/work-scan-dtc-found.jpg" alt="Scan tool showing a permanent drive-motor fault code found during inspection" data-caption="A permanent fault code a seller's reset couldn't clear">
+                <img src="img/work-undercarriage.jpg" alt="Undercarriage and suspension inspection view" data-caption="Undercarriage &mdash; suspension, exhaust, and leak check">
+                <img src="img/work-scan-battery-report.jpg" alt="Scan tool showing hybrid battery pack life diagnostic result" data-caption="Hybrid battery pack life flagged before the sale, not after">
+                <img src="img/work-headlight-detail.jpg" alt="Close detail inspection of a vehicle headlight and front corner" data-caption="Every panel and light housing checked up close">
+                <div class="slideshow-caption" id="slideshow-caption"></div>
+                <div class="slideshow-dots" id="slideshow-dots"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function () {
+    var root = document.getElementById('work-slideshow');
+    if (!root) return;
+    var imgs = Array.prototype.slice.call(root.querySelectorAll('.slideshow-track > img'));
+    var captionEl = document.getElementById('slideshow-caption');
+    var dotsEl = document.getElementById('slideshow-dots');
+    var i = 0;
+    var timer;
+
+    imgs.forEach(function (img, idx) {
+        var dot = document.createElement('button');
+        dot.setAttribute('aria-label', 'Show photo ' + (idx + 1));
+        dot.addEventListener('click', function () { show(idx); restart(); });
+        dotsEl.appendChild(dot);
+    });
+
+    function show(idx) {
+        imgs[i].classList.remove('active');
+        dotsEl.children[i].classList.remove('active');
+        i = idx;
+        imgs[i].classList.add('active');
+        dotsEl.children[i].classList.add('active');
+        captionEl.textContent = imgs[i].getAttribute('data-caption');
+    }
+
+    function next() { show((i + 1) % imgs.length); }
+
+    function restart() {
+        clearInterval(timer);
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            timer = setInterval(next, 4500);
+        }
+    }
+
+    show(0);
+    restart();
+})();
+</script>
 
 <!-- POSITIONING + CREDENTIALS -->
 <section class="block">
@@ -667,8 +783,9 @@
         <h2>The Written Report Is the Product</h2>
         <div class="sample">
             <p>Your report documents photos, observed findings, supported scan information, and any inspection limits. It is condition information for your decision, not a warranty, appraisal, repair estimate, or guarantee that an unobserved problem does not exist.</p>
-            <p style="font-weight:600; margin-top:20px; margin-bottom:12px;">See two real inspections, client and seller details redacted:</p>
+            <p style="font-weight:600; margin-top:20px; margin-bottom:12px;">See real inspections, client and seller details redacted:</p>
             <p style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:0;">
+                <a href="sample-inspection-sheet.html" class="btn btn-primary">The Inspection Sheet Itself &rarr;</a>
                 <a href="sample-report-hybrid.html" class="btn btn-primary">Hybrid Battery Fault Catch &rarr;</a>
                 <a href="sample-report-ice.html" class="btn btn-primary">Mileage Verification &rarr;</a>
             </p>
