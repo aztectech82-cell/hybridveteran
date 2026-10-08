@@ -734,6 +734,20 @@
                     <label for="location">Where Is the Vehicle? (City or Dealer)</label>
                     <input type="text" id="location" name="location" required placeholder="City, or dealer name and city">
                 </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dealer-contact-name">Dealer/Seller Contact Name</label>
+                        <input type="text" id="dealer-contact-name" name="dealer-contact-name" placeholder="Who to ask for on-site">
+                    </div>
+                    <div class="form-group">
+                        <label for="dealer-contact-phone">Dealer/Seller Contact Phone</label>
+                        <input type="tel" id="dealer-contact-phone" name="dealer-contact-phone" placeholder="(555) 555-5555">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dealer-address">Dealer/Seller Address</label>
+                    <input type="text" id="dealer-address" name="dealer-address" placeholder="Street address, if different from the city above">
+                </div>
                 <div class="form-group">
                     <label for="window">Preferred Appointment Window</label>
                     <input type="text" id="window" name="window" placeholder="Weekend date and time range">
@@ -755,6 +769,14 @@
                             <option value="no">Seller says no</option>
                         </select>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="want-present">Would You Like Me Present During the Inspection?</label>
+                    <select id="want-present" name="want-present">
+                        <option value="not-sure">Not sure yet</option>
+                        <option value="yes">Yes, I'd like to be there</option>
+                        <option value="no">No, inspect independently and send me the report</option>
+                    </select>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
@@ -812,9 +834,13 @@ function handleSubmit(e) {
              + 'VIN: ' + data.get('vin') + '\n'
              + 'Mileage: ' + data.get('mileage') + '\n'
              + 'Seller location: ' + data.get('location') + '\n'
+             + 'Dealer/seller contact name: ' + data.get('dealer-contact-name') + '\n'
+             + 'Dealer/seller contact phone: ' + data.get('dealer-contact-phone') + '\n'
+             + 'Dealer/seller address: ' + data.get('dealer-address') + '\n'
              + 'Preferred window: ' + data.get('window') + '\n'
              + 'Seller permission/access: ' + data.get('permission') + '\n'
              + 'Road-test permission: ' + data.get('road-test') + '\n'
+             + 'Want me present during inspection: ' + data.get('want-present') + '\n'
              + 'Cold start available: ' + data.get('cold-start') + '\n'
              + 'EV charging access: ' + data.get('charging-access') + '\n'
              + 'Details: ' + data.get('details');
