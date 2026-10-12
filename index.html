@@ -378,8 +378,15 @@
         @media (max-width: 860px) {
             .hero .container { grid-template-columns: 1fr; gap: 0; }
             .hero-copy { padding-bottom: 28px; }
-            .hero-photo { margin: 0 -24px; }
-            .hero-photo img { border-left: none; }
+            .hero-photo { margin: 24px auto 0; width: 100%; max-width: 420px; }
+            .hero-photo > img { border-left: none; height: 440px; }
+            .hero-photo-row img { height: 130px; }
+        }
+        @media (max-width: 480px) {
+            .hero-photo > img { height: 360px; }
+            .hero-photo-row img { height: 110px; }
+            .nav-brand img { height: 90px; }
+            .nav-brand-text strong { font-size: 1.2rem; }
         }
         .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
         .hero-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-top: 20px; }
