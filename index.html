@@ -793,8 +793,13 @@
 
 <script>
 (function () {
-    var roots = Array.prototype.slice.call(document.querySelectorAll('.slideshow'));
-    roots.forEach(initSlideshow);
+    document.addEventListener('DOMContentLoaded', run);
+    if (document.readyState !== 'loading') run();
+
+    function run() {
+        var roots = Array.prototype.slice.call(document.querySelectorAll('.slideshow'));
+        roots.forEach(initSlideshow);
+    }
 
     function initSlideshow(root) {
         var imgs = Array.prototype.slice.call(root.querySelectorAll('.slideshow-track > img'));
