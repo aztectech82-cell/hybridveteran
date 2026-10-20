@@ -995,7 +995,11 @@
             </div>
             </div>
             <div class="form-card">
-                <form id="inspection-form" onsubmit="handleSubmit(event)">
+                <form id="inspection-form" action="https://formsubmit.co/marcos@hybridveteran.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Inspection Request - Hybrid Veteran">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_next" value="https://hybridveteran.com/?submitted=true">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -1113,8 +1117,8 @@
                         <label for="details">Anything Else We Should Know?</label>
                         <textarea id="details" name="details" placeholder="Concerns, warning lights, other vehicles, or questions"></textarea>
                     </div>
-                    <button type="submit" class="form-submit">Prepare Email Request</button>
-                    <p class="form-note">This opens your email app with the request filled in. Nothing is sent until you review it and press Send.</p>
+                    <button type="submit" class="form-submit">Send Inspection Request</button>
+                    <p class="form-note">Submits directly to us -- no email app required. We'll follow up to confirm details.</p>
                 </form>
                 <p id="form-status" class="form-note" role="status" aria-live="polite" hidden></p>
             </div>
@@ -1189,35 +1193,15 @@
 </footer>
 
 <script>
-function handleSubmit(e) {
-    e.preventDefault();
-    var form = document.getElementById('inspection-form');
+(function () {
+    if (window.location.search.indexOf('submitted=true') === -1) return;
     var status = document.getElementById('form-status');
-    var data = new FormData(form);
-    var subject = 'Inspection Request - ' + data.get('vehicle');
-    var body = 'Name: ' + data.get('name') + '\n'
-             + 'Phone: ' + data.get('phone') + '\n'
-             + 'Email: ' + data.get('email') + '\n'
-             + 'How many vehicles: ' + data.get('count') + '\n'
-             + 'Powertrain: ' + data.get('powertrain') + '\n'
-             + 'Vehicle(s): ' + data.get('vehicle') + '\n'
-             + 'VIN: ' + data.get('vin') + '\n'
-             + 'Mileage: ' + data.get('mileage') + '\n'
-             + 'Seller location: ' + data.get('location') + '\n'
-             + 'Dealer/seller contact name: ' + data.get('dealer-contact-name') + '\n'
-             + 'Dealer/seller contact phone: ' + data.get('dealer-contact-phone') + '\n'
-             + 'Dealer/seller address: ' + data.get('dealer-address') + '\n'
-             + 'Preferred window: ' + data.get('window') + '\n'
-             + 'Seller permission/access: ' + data.get('permission') + '\n'
-             + 'Road-test permission: ' + data.get('road-test') + '\n'
-             + 'Want present during inspection: ' + data.get('want-present') + '\n'
-             + 'Cold start available: ' + data.get('cold-start') + '\n'
-             + 'EV charging access: ' + data.get('charging-access') + '\n'
-             + 'Details: ' + data.get('details');
-    status.textContent = 'Your email app should open now. Review the request and press Send; nothing has been sent yet.';
+    if (!status) return;
+    status.textContent = 'Thanks -- your inspection request was sent. We will follow up to confirm details.';
     status.hidden = false;
-    window.location.href = 'mailto:marcos@hybridveteran.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-}
+    var formCard = document.getElementById('inspection-form');
+    if (formCard) formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+})();
 </script>
 
 </body>
