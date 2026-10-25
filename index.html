@@ -301,12 +301,15 @@
             display: block;
         }
         .report-preview .report-preview-label {
+            display: block;
             padding: 14px 18px;
             font-size: 0.9rem;
             font-weight: 700;
             text-transform: none;
             letter-spacing: normal;
             font-family: 'Barlow', sans-serif;
+            color: var(--white);
+            text-decoration: none;
         }
         .report-preview .report-preview-label span {
             display: block;
@@ -795,12 +798,12 @@
             <img src="img/work-front-end-walkaround.jpg" width="1200" height="1600"
                  alt="Front end walk-around on a pickup truck during a mobile pre-purchase inspection">
             <figcaption>
-                <strong>Gas, diesel, hybrid, EV. Cars and trucks.</strong>
-                Same checklist and written report on every vehicle, with extra checks for what it runs on.
+                <strong>A Report Built Around Your Concerns</strong>
+                Tell us what worries you about the vehicle. We check it, document it, and hand you a real written report.
             </figcaption>
             <div class="hero-photo-row">
                 <img src="img/work-dpf-diagnostic.jpg" alt="Diesel particulate filter and exhaust system inspection" loading="lazy" decoding="async">
-                <img src="img/work-battery-scan-featured.jpg" alt="Hybrid battery scan showing pack voltage, state of charge, and cell balance" loading="lazy" decoding="async">
+                <img src="img/work-hsd-inverter-bay.jpg" alt="Toyota Hybrid Synergy Drive inverter bay inspection" loading="lazy" decoding="async">
             </div>
         </figure>
     </div>
@@ -836,13 +839,22 @@
                     <div class="slideshow-dots" id="slideshow-dots"></div>
                 </div>
             </div>
-            <a class="report-preview" href="sample-inspection-sheet.html">
-                <img src="sample-report-images/volt-checklist_p1.png" alt="Real Hybrid Veteran inspection sheet, client and dealer details redacted">
-                <div class="report-preview-label">
-                    See the Real Inspection Sheet
-                    <span>The actual 58-point checklist, redacted &rarr;</span>
+            <div class="report-preview" id="samples">
+                <div class="slideshow" id="report-slideshow">
+                    <div class="slideshow-track">
+                        <img class="active" src="sample-report-images/volt-checklist_p1.png" alt="Real Hybrid Veteran inspection report, client and dealer details redacted" data-caption="A real report, built around what the buyer asked us to check">
+                        <img loading="lazy" decoding="async" src="sample-report-images/hybrid_p1.png" alt="Sample report page: hybrid battery fault findings" data-caption="Hybrid battery fault a dealer left unresolved, caught before the sale">
+                        <img loading="lazy" decoding="async" src="sample-report-images/ice_p1.png" alt="Sample report page: mileage verification findings" data-caption="Mileage claim verified on an 18-year-old truck">
+                        <img loading="lazy" decoding="async" src="sample-report-images/volt-checklist_p2.png" alt="Real Hybrid Veteran inspection report, page 2, client and dealer details redacted" data-caption="Every finding documented in writing, not just a verbal pass/fail">
+                        <div class="slideshow-caption" id="report-slideshow-caption"></div>
+                        <div class="slideshow-dots" id="report-slideshow-dots"></div>
+                    </div>
                 </div>
-            </a>
+                <a class="report-preview-label" href="sample-inspection-sheet.html">
+                    See the Real Inspection Sheets
+                    <span>Real reports, redacted &rarr;</span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -964,7 +976,7 @@
 <section class="ev-block" id="vehicles">
     <div class="container">
         <h2>Every Powertrain, Every Body Style</h2>
-        <p class="lead">Same checklist, same written report, with extra checks for what the vehicle runs on. Battery data is vehicle-reported when the exact model and equipment support it, not a laboratory capacity test.</p>
+        <p class="lead">The report is built around what you're actually worried about on this vehicle. Battery data is vehicle-reported when the exact model and equipment support it, not a laboratory capacity test.</p>
         <div class="ev-grid">
             <div class="ev-item"><strong>Gas</strong>Engine, cooling, leaks, emissions readiness, and how it runs cold and warm</div>
             <div class="ev-item"><strong>Diesel</strong>Leaks, exhaust and DPF condition, stored codes, and smoke or hard starting</div>
@@ -988,7 +1000,7 @@
                 <li>
                     <div class="step-text">
                         <h3>Do you inspect gas and diesel trucks, not just hybrids and EVs?</h3>
-                        <p>Yes. Every vehicle gets the same checklist and written report, whether it runs on gas, diesel, hybrid, or electric power, from compact cars to light-duty pickups, SUVs, and vans. For commercial trucks over 14,000 lb, our sister business <a href="https://vetfleet.com">VetFleet</a> handles heavy-duty inspections and Clean Truck Check.</p>
+                        <p>Yes. The inspection and report are built around your specific concerns on any vehicle, gas, diesel, hybrid, or electric, from compact cars to light-duty pickups, SUVs, and vans. For commercial trucks over 14,000 lb, our sister business <a href="https://vetfleet.com">VetFleet</a> handles heavy-duty inspections and Clean Truck Check.</p>
                     </div>
                 </li>
                 <li>
@@ -1029,7 +1041,7 @@
       "name": "Do you inspect gas and diesel trucks, not just hybrids and EVs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Every vehicle gets the same checklist and written report, whether it runs on gas, diesel, hybrid, or electric power, from compact cars to light-duty pickups, SUVs, and vans. For commercial trucks over 14,000 lb, our sister business VetFleet handles heavy-duty inspections and Clean Truck Check."
+        "text": "Yes. The inspection and report are built around your specific concerns on any vehicle, gas, diesel, hybrid, or electric, from compact cars to light-duty pickups, SUVs, and vans. For commercial trucks over 14,000 lb, our sister business VetFleet handles heavy-duty inspections and Clean Truck Check."
       }
     },
     {
