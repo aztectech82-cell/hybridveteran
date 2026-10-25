@@ -677,6 +677,12 @@
         }
         .hero-types { color: var(--white); font-weight: 700; font-size: 1rem; margin: -6px 0 14px; letter-spacing: 0.3px; }
 
+        /* FAQ -- reuses the step list, but on a white background */
+        .faq .request-steps-col { max-width: 780px; margin: 0 auto; }
+        .faq .step-text h3 { color: var(--navy); font-size: 1.05rem; }
+        .faq .step-text p { color: var(--gray-800); font-weight: 500; }
+        .faq .request-steps li { margin-bottom: 18px; }
+
         /* PHONE LAYOUT -- no dead space */
         @media (max-width: 768px) {
             body { font-size: 17px; }
@@ -981,6 +987,12 @@
             <ul class="request-steps">
                 <li>
                     <div class="step-text">
+                        <h3>Do you inspect gas and diesel trucks, not just hybrids and EVs?</h3>
+                        <p>Yes. Every vehicle gets the same checklist and written report, whether it runs on gas, diesel, hybrid, or electric power, from compact cars to light-duty pickups, SUVs, and vans. For commercial trucks over 14,000 lb, our sister business <a href="https://vetfleet.com">VetFleet</a> handles heavy-duty inspections and Clean Truck Check.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-text">
                         <h3>What does a pre-purchase inspection check?</h3>
                         <p>A pre-purchase inspection checks a vehicle's observable condition, systems, and available diagnostic data before you buy &mdash; body, undercarriage, suspension, and a full OBD-II scan, documented with photos and a written report. Hybrid and EV vehicles get vehicle-reported battery and charging data added within the same visit when supported.</p>
                     </div>
@@ -1014,6 +1026,14 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Do you inspect gas and diesel trucks, not just hybrids and EVs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every vehicle gets the same checklist and written report, whether it runs on gas, diesel, hybrid, or electric power, from compact cars to light-duty pickups, SUVs, and vans. For commercial trucks over 14,000 lb, our sister business VetFleet handles heavy-duty inspections and Clean Truck Check."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What does a pre-purchase inspection check?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1025,7 +1045,7 @@
       "name": "How long does a mobile pre-purchase inspection take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most single-vehicle inspections are completed at the seller's location in one visit; exact timing depends on vehicle access, powertrain, and scope confirmed before the appointment."
+        "text": "Most single-vehicle inspections are completed at the seller's location in one visit; exact timing depends on vehicle access, powertrain, and scope confirmed before the appointment. We plan the appointment window with you in advance, not on arrival."
       }
     },
     {
