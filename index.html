@@ -12,11 +12,12 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Pre-Purchase Vehicle Inspection | Riverside &amp; Inland Empire | Hybrid Veteran</title>
-    <meta name="description" content="Veteran-owned mobile pre-purchase and pre-sale vehicle inspections in Riverside and the Inland Empire. Hybrid and EV battery health checked. ASE certified, BAR licensed (ARD 302636). Written report with photos. We come to you.">
+    <title>Mobile Pre-Purchase Vehicle Inspection | Southern California | Hybrid Veteran</title>
+    <meta name="description" content="Veteran-owned mobile pre-purchase and pre-sale vehicle inspections across Southern California for gas, diesel, hybrid, and electric cars, trucks, SUVs, and vans. ASE certified, BAR licensed (ARD 302636). Written report with photos. We come to you.">
     <link rel="canonical" href="https://hybridveteran.com/">
+    <link rel="icon" href="/img/hv-logo.jpg">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Mobile Pre-Purchase Vehicle Inspection | Riverside &amp; Inland Empire">
+    <meta property="og:title" content="Mobile Pre-Purchase Vehicle Inspection | Southern California">
     <meta property="og:description" content="Veteran-owned, ASE-certified mobile vehicle inspections with a written report, photos, and hybrid/EV battery health data. We come to you.">
     <meta property="og:url" content="https://hybridveteran.com/">
     <meta property="og:image" content="https://hybridveteran.com/img/work-battery-scan-featured.jpg">
@@ -28,23 +29,12 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Hybrid Veteran Vehicle Services",
-      "image": "https://hybridveteran.com/favicon.png",
+      "image": "https://hybridveteran.com/img/hv-logo.jpg",
+      "logo": "https://hybridveteran.com/img/hv-logo.jpg",
       "url": "https://hybridveteran.com/",
       "telephone": "+19093126588",
       "email": "marcos@hybridveteran.com",
-      "areaServed": [
-        {"@type": "City", "name": "Riverside, CA"},
-        {"@type": "City", "name": "Moreno Valley, CA"},
-        {"@type": "City", "name": "Corona, CA"},
-        {"@type": "City", "name": "Norco, CA"},
-        {"@type": "City", "name": "Jurupa Valley, CA"},
-        {"@type": "City", "name": "Rancho Cucamonga, CA"},
-        {"@type": "City", "name": "Ontario, CA"},
-        {"@type": "City", "name": "San Bernardino, CA"},
-        {"@type": "City", "name": "Redlands, CA"},
-        {"@type": "City", "name": "Chino, CA"},
-        {"@type": "City", "name": "Fontana, CA"}
-      ],
+      "areaServed": {"@type": "AdministrativeArea", "name": "Southern California"},
       "makesOffer": [
         {
           "@type": "Offer",
@@ -625,6 +615,7 @@
         }
         .area-list div h4 { font-size: 1rem; color: var(--gold-light); margin-bottom: 6px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; }
         .area-list div p { font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.88); }
+        .area-list div h4 a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 
         /* SAMPLE REPORT */
         .sample {
@@ -684,6 +675,55 @@
             .form-row { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; gap: 28px; }
         }
+        .hero-types { color: var(--white); font-weight: 700; font-size: 1rem; margin: -6px 0 14px; letter-spacing: 0.3px; }
+
+        /* PHONE LAYOUT -- no dead space */
+        @media (max-width: 768px) {
+            body { font-size: 17px; }
+            .nav { padding: 8px 0; }
+            .nav .container { flex-wrap: nowrap; justify-content: space-between; gap: 10px; }
+            .nav-links-row { display: none; }
+            .nav-brand { gap: 8px; }
+            .nav-brand img { height: 46px; }
+            .nav-brand-text strong { font-size: 1rem; }
+            .nav-brand-text small { display: none; }
+            .nav-cta { padding: 10px 12px; font-size: 0.9rem; white-space: nowrap; }
+            .hero { padding-top: 22px; }
+            .hero-copy { padding-bottom: 22px; }
+            .hero-badges { gap: 6px; margin-bottom: 12px; }
+            .hero-badges .badge { padding: 4px 10px; font-size: 0.68rem; }
+            .hero h1 { margin-bottom: 10px; }
+            .hero p { font-size: 1.05rem; margin-bottom: 16px; }
+            .hero-buttons { gap: 10px; }
+            .hero-links { margin-top: 14px; gap: 10px 18px; }
+            .hero-links a[href^="tel:"] { display: none; }
+            .hero-photo { display: none; }
+            .cred-strip { font-size: 0.85rem; }
+            .cred-strip .container { gap: 4px 16px; padding-top: 10px; padding-bottom: 10px; }
+            section.block, .ev-block, .multistop { padding: 32px 0; }
+            .block > .container > p.lead, .ev-block > .container > p.lead { margin-bottom: 18px; font-size: 1rem; }
+            .block h2 { margin-bottom: 8px; }
+            .gallery-grid { gap: 14px; }
+            .check-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .check-card { padding: 10px 10px; }
+            .check-card h3 { font-size: 0.88rem; margin-bottom: 4px; }
+            .check-card li { font-size: 0.84rem; line-height: 1.35; padding: 3px 0 3px 15px; }
+            .slideshow-track img { object-fit: cover; }
+            .report-preview img { aspect-ratio: 16 / 9; object-fit: cover; }
+            .report-preview .report-preview-label { padding: 10px 14px; }
+            .ev-grid { grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+            .ev-item { padding: 10px 12px; font-size: 0.9rem; }
+            .ev-item strong { font-size: 1rem; margin-bottom: 2px; }
+            .request-grid { gap: 16px; }
+            .request-steps li { margin-bottom: 12px; }
+            .request-photo { display: none; }
+            .form-card { padding: 18px 16px; }
+            .form-group { margin-bottom: 12px; }
+            .multistop-area-grid { gap: 18px; }
+            .multistop .ask { padding: 12px 16px; margin: 12px 0 6px; }
+            .footer { padding: 28px 0 16px; }
+            .footer-grid { gap: 16px; margin-bottom: 16px; }
+        }
     </style>
 </head>
 <body>
@@ -708,7 +748,7 @@
     <div class="nav-links-row">
         <div class="nav-links">
             <a href="#what-we-check">What We Check</a>
-            <a href="#hybrid-ev">Hybrid &amp; EV</a>
+            <a href="#vehicles">Gas, Diesel, Hybrid &amp; EV</a>
             <a href="#area">Service Area</a>
             <a href="#book">Book</a>
             <a href="https://www.yelp.com/biz/hybrid-veteran-vehicle-services-riverside" target="_blank" rel="noopener">Yelp</a>
@@ -730,8 +770,9 @@
                 <span class="badge">BAR ARD 302636</span>
                 <span class="badge">MOBILE &mdash; WE COME TO YOU</span>
             </div>
-            <h1>Mobile Pre-Purchase Vehicle Inspection<span>Riverside &amp; the Inland Empire</span></h1>
-            <p>Know what you are buying before you sign. Hybrid Veteran Vehicle Services sends an ASE-certified technician to the car &mdash; with a written condition report, photos, and hybrid or EV battery data when the vehicle supports it.</p>
+            <div class="hero-types">Gas &middot; Diesel &middot; Hybrid &middot; EV &middot; Cars &amp; Trucks</div>
+            <h1>Mobile Pre-Purchase Vehicle Inspection<span>Southern California</span></h1>
+            <p>Know what you are buying before you sign. Hybrid Veteran Vehicle Services sends an ASE-certified technician to the vehicle, gas or diesel, hybrid or EV, car or truck. You get a written condition report, photos, a full diagnostic scan, and battery data on hybrids and EVs when the vehicle supports it.</p>
             <div class="hero-buttons">
                 <a href="#book" class="btn btn-primary">Request an Inspection</a>
                 <a href="tel:9093126588" class="btn btn-outline">Call (909) 312-6588</a>
@@ -746,14 +787,14 @@
         </div>
         <figure class="hero-photo">
             <img src="img/work-battery-scan-featured.jpg" width="1290" height="1720"
-                 alt="Full hybrid battery diagnostic scan showing pack voltage, state of charge, and cell-by-cell balance during a pre-purchase vehicle inspection in Riverside, California">
+                 alt="Full hybrid battery diagnostic scan showing pack voltage, state of charge, and cell-by-cell balance during a pre-purchase vehicle inspection">
             <figcaption>
-                <strong>Full HV battery diagnostic, not just a code reader</strong>
-                Pack voltage, state of charge, and cell-by-cell balance &mdash; the data that actually tells you what a used hybrid battery is worth.
+                <strong>Real diagnostics, not just a code reader</strong>
+                Full scans on every vehicle, plus pack voltage and cell balance on hybrids and EVs.
             </figcaption>
             <div class="hero-photo-row">
-                <img src="img/work-scan-dtc-found.jpg" alt="Scan tool showing a permanent drive-motor fault code found during inspection">
-                <img src="img/work-headlight-detail.jpg" alt="Close detail inspection of a vehicle headlight and front corner">
+                <img src="img/work-front-end-walkaround.jpg" alt="Front end walk-around on a pickup truck during a mobile pre-purchase inspection" loading="lazy" decoding="async">
+                <img src="img/work-dpf-diagnostic.jpg" alt="Diesel particulate filter and exhaust system inspection" loading="lazy" decoding="async">
             </div>
         </figure>
     </div>
@@ -777,11 +818,13 @@
         <div class="gallery-grid">
             <div class="slideshow" id="work-slideshow">
                 <div class="slideshow-track">
-                    <img class="active" src="img/work-battery-scan-featured.jpg" alt="Hybrid battery scan showing pack voltage, state of charge, and per-block balance" data-caption="Full hybrid battery scan &mdash; pack voltage, state of charge, cell-by-cell balance">
-                    <img src="img/work-hybrid-engine-bay.jpg" alt="Hybrid Synergy Drive engine bay during a pre-purchase inspection" data-caption="Hybrid Synergy Drive bay &mdash; HV cabling and inverter checked in place">
+                    <img class="active" src="img/work-front-end-walkaround.jpg" alt="Front end walk-around on a pickup truck during a mobile pre-purchase inspection" data-caption="Trucks too: panels, gaps, and lights checked before the engine starts">
+                    <img loading="lazy" decoding="async" src="img/work-dpf-diagnostic.jpg" alt="Diesel particulate filter and exhaust system diagnostic inspection" data-caption="Diesel: DPF and exhaust checked up close, not just scanned">
+                    <img loading="lazy" decoding="async" src="img/work-battery-scan-featured.jpg" alt="Hybrid battery scan showing pack voltage, state of charge, and per-block balance" data-caption="Hybrid: pack voltage, state of charge, cell-by-cell balance">
+                    <img loading="lazy" decoding="async" src="img/work-hybrid-engine-bay.jpg" alt="Hybrid Synergy Drive engine bay during a pre-purchase inspection" data-caption="Hybrid Synergy Drive bay &mdash; HV cabling and inverter checked in place">
                     <img src="img/work-scan-dtc-found.jpg" alt="Scan tool showing a permanent drive-motor fault code found during inspection" data-caption="A permanent fault code a seller's reset couldn't clear">
-                    <img src="img/work-undercarriage.jpg" alt="Undercarriage and suspension inspection view" data-caption="Undercarriage &mdash; suspension, exhaust, and leak check">
-                    <img src="img/work-scan-battery-report.jpg" alt="Scan tool showing hybrid battery pack life diagnostic result" data-caption="Hybrid battery pack life flagged before the sale, not after">
+                    <img loading="lazy" decoding="async" src="img/work-undercarriage.jpg" alt="Undercarriage and suspension inspection view" data-caption="Undercarriage &mdash; suspension, exhaust, and leak check">
+                    <img loading="lazy" decoding="async" src="img/work-scan-battery-report.jpg" alt="Scan tool showing hybrid battery pack life diagnostic result" data-caption="Hybrid battery pack life flagged before the sale, not after">
                     <img src="img/work-headlight-detail.jpg" alt="Close detail inspection of a vehicle headlight and front corner" data-caption="Every panel and light housing checked up close">
                     <div class="slideshow-caption" id="slideshow-caption"></div>
                     <div class="slideshow-dots" id="slideshow-dots"></div>
@@ -912,20 +955,20 @@
 </section>
 
 <!-- HYBRID / EV WEDGE -->
-<section class="ev-block" id="hybrid-ev">
+<section class="ev-block" id="vehicles">
     <div class="container">
-        <h2>Hybrid &amp; EV Supported-Data Inspection</h2>
-        <p class="lead">Hybrid and EV vehicles get extra checks within the same visit, not a separate appointment &mdash; vehicle-reported battery and charging data when the exact model and available equipment support access. This is not automatically a laboratory battery-capacity test.</p>
+        <h2>Every Powertrain, Every Body Style</h2>
+        <p class="lead">Same checklist, same written report, with extra checks for what the vehicle runs on. Battery data is vehicle-reported when the exact model and equipment support it, not a laboratory capacity test.</p>
         <div class="ev-grid">
-            <div class="ev-item"><strong>Warning Indicators</strong>Hybrid, EV, charging, and battery-system warnings observed at the visit</div>
-            <div class="ev-item"><strong>Supported Scan Data</strong>Vehicle-reported codes and parameters available to the connected equipment</div>
-            <div class="ev-item"><strong>12-Volt System</strong>Accessible 12-volt battery or charging information when supported</div>
-            <div class="ev-item"><strong>Charging Observation</strong>Only when compatible charging access is available and included in scope</div>
-            <div class="ev-item"><strong>Visible Components</strong>Accessible cables, connectors, cooling items, and physical condition without disassembly</div>
+            <div class="ev-item"><strong>Gas</strong>Engine, cooling, leaks, emissions readiness, and how it runs cold and warm</div>
+            <div class="ev-item"><strong>Diesel</strong>Leaks, exhaust and DPF condition, stored codes, and smoke or hard starting</div>
+            <div class="ev-item"><strong>Trucks, SUVs &amp; Vans</strong>Frame, suspension, 4x4 and driveline, hitch and towing wear where visible</div>
+            <div class="ev-item"><strong>Hybrid</strong>Hybrid system warnings, battery block data, and battery cooling where accessible</div>
+            <div class="ev-item"><strong>EV</strong>Battery and charging warnings, supported battery data, and charge port function</div>
             <div class="ev-item"><strong>Clear Limitations</strong>Unavailable capacity, isolation, module, or charging tests are identified in the report</div>
         </div>
         <div class="ev-cta">
-            <a href="tel:9093126588" class="btn btn-primary">Ask About Your Hybrid or EV</a>
+            <a href="tel:9093126588" class="btn btn-primary">Ask About Your Vehicle</a>
         </div>
     </div>
 </section>
@@ -1044,26 +1087,26 @@
             </ul>
             <div class="slideshow request-photo">
                 <div class="slideshow-track">
-                    <img class="active" src="img/work-undercarriage.jpg" alt="Undercarriage and suspension inspection view" data-caption="Undercarriage &mdash; suspension, exhaust, and leak check">
-                    <img src="img/work-hybrid-engine-bay.jpg" alt="Hybrid Synergy Drive engine bay during a pre-purchase inspection" data-caption="Hybrid Synergy Drive bay &mdash; HV cabling and inverter checked in place">
-                    <img src="img/work-scan-battery-report.jpg" alt="Scan tool showing hybrid battery pack life diagnostic result" data-caption="Hybrid battery pack life flagged before the sale, not after">
-                    <img src="img/work-bushing-closeup.jpg" alt="Close inspection of a worn suspension bushing and exhaust component" data-caption="Suspension bushing wear checked up close">
-                    <img src="img/work-shock-closeup.jpg" alt="Close inspection of a shock absorber and undercarriage mount" data-caption="Shock absorber and mounts inspected for wear and leaks">
-                    <img src="img/work-ride-height-measure.jpg" alt="Tape measure used to check ride height at the suspension" data-caption="Ride height measured against spec, not guessed">
+                    <img loading="lazy" decoding="async" class="active" src="img/work-undercarriage.jpg" alt="Undercarriage and suspension inspection view" data-caption="Undercarriage &mdash; suspension, exhaust, and leak check">
+                    <img loading="lazy" decoding="async" src="img/work-hybrid-engine-bay.jpg" alt="Hybrid Synergy Drive engine bay during a pre-purchase inspection" data-caption="Hybrid Synergy Drive bay &mdash; HV cabling and inverter checked in place">
+                    <img loading="lazy" decoding="async" src="img/work-scan-battery-report.jpg" alt="Scan tool showing hybrid battery pack life diagnostic result" data-caption="Hybrid battery pack life flagged before the sale, not after">
+                    <img src="img/work-front-end-walkaround.jpg" alt="Front fender and hood walk-around on a pickup during a mobile pre-purchase inspection" data-caption="Walk-around first: panels, gaps, and lights checked before the engine starts" loading="lazy" decoding="async">
+                    <img loading="lazy" decoding="async" src="img/work-shock-closeup.jpg" alt="Close inspection of a shock absorber and undercarriage mount" data-caption="Shock absorber and mounts inspected for wear and leaks">
+                    <img src="img/work-hsd-inverter-bay.jpg" alt="Toyota Hybrid Synergy Drive bay with inverter, orange high-voltage cables, and coolant reservoirs inspected in place" data-caption="Inverter, orange HV cables, and coolant reservoirs checked in place, never disturbed" loading="lazy" decoding="async">
                     <div class="slideshow-caption"></div>
                     <div class="slideshow-dots"></div>
                 </div>
             </div>
             <div class="slideshow request-photo">
                 <div class="slideshow-track">
-                    <img class="active" src="img/work-paint-inspection.jpg" alt="Close paint and panel-gap inspection on a vehicle body panel" data-caption="Paint and panel-gap check &mdash; catching prior-repair evidence before you buy">
-                    <img src="img/work-dpf-diagnostic.jpg" alt="Diesel particulate filter and exhaust system diagnostic inspection" data-caption="DPF and exhaust system checked up close, not just scanned">
-                    <img src="img/work-ride-height-check.jpg" alt="Technician measuring tire and suspension ride height during inspection" data-caption="Ride height and suspension measured, not eyeballed">
-                    <img src="img/work-taillight-closeup.jpg" alt="Close inspection of a vehicle taillight and reflector assembly" data-caption="Every light housing checked for moisture and cracks">
-                    <img src="img/work-dtc-scan.jpg" alt="Scan tool showing a permanent drive motor position sensor fault code" data-caption="A permanent fault code read directly off the scan tool">
-                    <img src="img/work-hsd-engine-bay-2.jpg" alt="Hybrid Synergy Drive engine bay showing high-voltage cabling and coolant reservoirs" data-caption="HV cabling and coolant reservoirs checked in place">
-                    <img src="img/work-battery-health-chart.jpg" alt="Scan tool showing EV/HEV/PHEV battery health by block voltage" data-caption="Battery health by block &mdash; not just a single pass/fail number">
-                    <img src="img/work-paint-carfax.jpg" alt="Vehicle paint and panel inspection with CARFAX report referenced on site" data-caption="Paint checked against the vehicle's own history on site">
+                    <img loading="lazy" decoding="async" class="active" src="img/work-paint-inspection.jpg" alt="Close paint and panel-gap inspection on a vehicle body panel" data-caption="Paint and panel-gap check &mdash; catching prior-repair evidence before you buy">
+                    <img loading="lazy" decoding="async" src="img/work-dpf-diagnostic.jpg" alt="Diesel particulate filter and exhaust system diagnostic inspection" data-caption="DPF and exhaust system checked up close, not just scanned">
+                    <img loading="lazy" decoding="async" src="img/work-ride-height-check.jpg" alt="Technician measuring tire and suspension ride height during inspection" data-caption="Ride height and suspension measured, not eyeballed">
+                    <img loading="lazy" decoding="async" src="img/work-taillight-closeup.jpg" alt="Close inspection of a vehicle taillight and reflector assembly" data-caption="Every light housing checked for moisture and cracks">
+                    <img src="img/work-fender-measurement.jpg" alt="Tape measure laid across a fender during a panel and height measurement" data-caption="Measured, not eyeballed: panel and height checks" loading="lazy" decoding="async">
+                    <img src="img/work-scan-p0c17-permanent.jpg" alt="Innova scan tool showing a permanent P0C17 drive motor position sensor code and smog monitor status" data-caption="A permanent fault code a seller reset cannot clear, read directly off the scan tool" loading="lazy" decoding="async">
+                    <img loading="lazy" decoding="async" src="img/work-battery-health-chart.jpg" alt="Scan tool showing EV/HEV/PHEV battery health by block voltage" data-caption="Battery health by block &mdash; not just a single pass/fail number">
+                    <img src="img/work-control-arm-bushing.jpg" alt="Close inspection of a rusted lower control arm and suspension bushing" data-caption="Control arm and bushing wear checked up close" loading="lazy" decoding="async">
                     <div class="slideshow-caption"></div>
                     <div class="slideshow-dots"></div>
                 </div>
@@ -1101,7 +1144,8 @@
                         <div class="form-group">
                             <label for="powertrain">Powertrain</label>
                             <select id="powertrain" name="powertrain">
-                                <option value="gas">Gas / Diesel</option>
+                                <option value="gas">Gas</option>
+                                <option value="diesel">Diesel</option>
                                 <option value="hybrid">Hybrid</option>
                                 <option value="ev">Electric (EV)</option>
                                 <option value="mixed">Mixed / Not sure yet</option>
@@ -1212,21 +1256,7 @@
         </div>
         <div id="area">
             <h2>Service Area</h2>
-            <p class="lead">Mobile by appointment across the listed Inland Empire service area. Travel and availability are confirmed before booking; weekend appointments are limited.</p>
-            <div class="area-list">
-                <div>
-                    <h4>Core Riverside County</h4>
-                    <p>Riverside, Moreno Valley, Corona, Norco, Jurupa Valley, Eastvale</p>
-                </div>
-                <div>
-                    <h4>Inland Empire</h4>
-                    <p>Rancho Cucamonga, Ontario, San Bernardino, Chino, Chino Hills, Fontana</p>
-                </div>
-                <div>
-                    <h4>Outside the Core Area</h4>
-                    <p>Ask first. Travel is quoted for the exact vehicle location.</p>
-                </div>
-            </div>
+            <p class="lead">Mobile by appointment across Southern California. Tell us where the car is, and travel and availability are confirmed before booking. Weekend appointments are limited.</p>
         </div>
     </div>
 </section>
@@ -1237,7 +1267,7 @@
         <div class="footer-grid">
             <div>
                 <h4>Hybrid Veteran Vehicle Services</h4>
-                <p>Veteran-owned mobile pre-purchase and pre-sale vehicle inspections.<br>Serving Riverside and the Inland Empire by appointment.</p>
+                <p>Veteran-owned mobile pre-purchase and pre-sale vehicle inspections.<br>Serving Southern California by appointment.</p>
                 <p style="margin-top:12px;">
                     <strong>Phone:</strong> <a href="tel:9093126588">(909) 312-6588</a><br>
                     <strong>Email:</strong> <a href="mailto:marcos@hybridveteran.com">marcos@hybridveteran.com</a><br>
@@ -1248,9 +1278,10 @@
                 <h4>Services</h4>
                 <ul class="footer-links">
                     <li><a href="#what-we-check">What We Check</a></li>
-                    <li><a href="#hybrid-ev">Hybrid &amp; EV</a></li>
+                    <li><a href="#vehicles">Gas, Diesel, Hybrid &amp; EV</a></li>
                     <li><a href="#area">Service Area</a></li>
                     <li><a href="#book">Request an Inspection</a></li>
+                    <li><a href="used-hybrid-ev-buyers-checklist.html">Used Hybrid &amp; EV Buyer's Checklist</a></li>
                 </ul>
             </div>
             <div>
